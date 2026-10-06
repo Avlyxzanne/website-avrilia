@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Untuk Avrilia Anggraini ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #fff5f7;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e75480;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #e75480;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px 50px;
+            position: relative;
+            background:
+                linear-gradient(
+                    rgba(255, 230, 238, 0.85),
+                    rgba(255, 245, 247, 0.95)
+                ),
+                url("foto-kalian.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn 2s ease;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 8vw, 90px);
+            color: #d94f78;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: clamp(20px, 4vw, 32px);
+            color: #555;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .heart {
+            font-size: 60px;
+            margin: 25px 0;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 30px;
+            background: #e75480;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: 0.3s;
+            box-shadow: 0 8px 20px rgba(231,84,128,0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            background: #d63d69;
+        }
+
+        /* ================= SECTION ================= */
+
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #d94f78;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #777;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 450px;
+            border-radius: 30px;
+            background-image: url("avrilia.jpg");
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .about-text h3 {
+            font-size: 32px;
+            color: #d94f78;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #666;
+            line-height: 2;
+            font-size: 17px;
+        }
+
+        /* ================= MEMORY ================= */
+
+        .memories {
+            background: #fff;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            background: #eee;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        /* ================= LETTER ================= */
+
+        .letter-section {
+            background: linear-gradient(135deg, #ffe4ec, #fff6f8);
+        }
+
+        .letter {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            line-height: 2;
+            color: #555;
+        }
+
+        .letter h3 {
+            color: #d94f78;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 30px;
+            font-style: italic;
+            color: #d94f78;
+            font-size: 20px;
+        }
+
+        /* ================= REASONS ================= */
+
+        .reasons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .reason {
+            padding: 35px 25px;
+            background: white;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .reason:hover {
+            transform: translateY(-8px);
+        }
+
+        .reason .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .reason h3 {
+            color: #d94f78;
+            margin-bottom: 10px;
+        }
+
+        .reason p {
+            color: #777;
+            line-height: 1.7;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+            padding: 35px;
+            background: #d94f78;
+            color: white;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        /* ================= FLOATING HEART ================= */
+
+        .floating-heart {
+            position: fixed;
+            bottom: -30px;
+            font-size: 20px;
+            animation: floatUp 5s linear forwards;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        /* ================= ANIMATION ================= */
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes floatUp {
+            from {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 768px) {
+
+            header {
+                padding: 15px 5%;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 13px;
+            }
+
+            section {
+                padding: 70px 5%;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                height: 350px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item {
+                height: 350px;
+            }
+
+            .reasons {
+                grid-template-columns: 1fr;
+            }
+
+            .letter {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+        <div class="logo">A ❤️</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#memory">Memory</a>
+            <a href="#letter">Letter</a>
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="heart">❤️</div>
+
+            <h1>Avrilia Anggraini</h1>
+
+            <h2>Someone Special in My Life</h2>
+
+            <p>
+                Ada banyak hal indah di dunia ini,
+                tapi salah satu yang paling aku syukuri
+                adalah bisa mengenal kamu.
+            </p>
+
+            <a href="#letter" class="btn">
+                Buka Surat Untukmu 💌
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <div class="section-title">
+            <h2>Tentang Kamu ❤️</h2>
+            <p>Seseorang yang punya tempat spesial</p>
+        </div>
+
+        <div class="about">
+
+            <div class="about-image"></div>
+
+            <div class="about-text">
+
+                <h3>Hai, Avrilia! 🌷</h3>
+
+                <p>
+                    Kamu adalah seseorang yang mungkin tidak selalu
+                    menyadari betapa berharganya dirimu.
+                    Senyummu, caramu berbicara, caramu memperhatikan
+                    hal-hal kecil, semuanya punya cerita tersendiri.
+                </p>
+
+                <br>
+
+                <p>
+                    Website kecil ini dibuat khusus untuk kamu.
+                    Bukan karena aku pandai merangkai kata,
+                    tapi karena aku ingin membuat sesuatu yang
+                    bisa mengingatkan kamu bahwa ada seseorang
+                    yang sangat menghargai kehadiranmu.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MEMORY ================= -->
+
+    <section class="memories" id="memory">
+
+        <div class="section-title">
+
+            <h2>Our Memories 📸</h2>
+
+            <p>
+                Beberapa momen yang ingin selalu aku ingat.
+            </p>
+
+        </div>
+
+
+        <div class="gallery">
+
+            <div class="gallery-item">
+                <img src="foto1.jpg" alt="Memory 1">
+            </div>
+
+            <div class="gallery-item">
+                <img src="foto2.jpg" alt="Memory 2">
+            </div>
+
+            <div class="gallery-item">
+                <img src="foto3.jpg" alt="Memory 3">
+            </div>
+
+            <div class="gallery-item">
+                <img src="foto4.jpg" alt="Memory 4">
+            </div>
+
+            <div class="gallery-item">
+                <img src="foto5.jpg" alt="Memory 5">
+            </div>
+
+            <div class="gallery-item">
+                <img src="foto6.jpg" alt="Memory 6">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= REASONS ================= -->
+
+    <section>
+
+        <div class="section-title">
+
+            <h2>Kenapa Kamu Spesial? 💕</h2>
+
+            <p>
+                Mungkin ini cuma sebagian kecil alasannya.
+            </p>
+
+        </div>
+
+
+        <div class="reasons">
+
+            <div class="reason">
+
+                <div class="icon">😊</div>
+
+                <h3>Senyummu</h3>
+
+                <p>
+                    Senyummu punya cara sederhana untuk
+                    membuat hari yang biasa terasa lebih baik.
+                </p>
+
+            </div>
+
+
+            <div class="reason">
+
+                <div class="icon">❤️</div>
+
+                <h3>Perhatianmu</h3>
+
+                <p>
+                    Hal-hal kecil yang kamu lakukan terkadang
+                    justru menjadi hal yang paling aku ingat.
+                </p>
+
+            </div>
+
+
+            <div class="reason">
+
+                <div class="icon">🌷</div>
+
+                <h3>Dirimu</h3>
+
+                <p>
+                    Karena kamu adalah kamu.
+                    Dan itu sudah lebih dari cukup.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LETTER ================= -->
+
+    <section class="letter-section" id="letter">
+
+        <div class="section-title">
+
+            <h2>Surat Untuk Avrilia 💌</h2>
+
+        </div>
+
+
+        <div class="letter">
+
+            <h3>Untuk kamu, Avrilia.</h3>
+
+            <p>
+                Hai, sayang.
+            </p>
+
+            <br>
+
+            <p>
+                Aku mungkin bukan orang yang paling pandai
+                mengatakan apa yang aku rasakan.
+                Kadang aku juga tidak tahu bagaimana cara
+                menjelaskan betapa berartinya kamu buat aku.
+            </p>
+
+            <br>
+
+            <p>
+                Tapi kalau ada satu hal yang ingin aku kamu tahu,
+                aku bersyukur pernah dipertemukan dengan kamu.
+                Dari sekian banyak orang yang ada di dunia ini,
+                aku bisa mengenal seseorang bernama
+                <b>Avrilia Anggraini</b>.
+            </p>
+
+            <br>
+
+            <p>
+                Terima kasih sudah menjadi bagian dari cerita
+                hidupku. Terima kasih untuk setiap senyum,
+                perhatian, cerita, dan momen yang kita lewati.
+            </p>
+
+            <br>
+
+            <p>
+                Aku tidak tahu seperti apa cerita kita
+                di masa depan. Tapi untuk sekarang,
+                aku ingin menikmati setiap momen yang kita punya
+                dan membuat sebanyak mungkin kenangan indah
+                bersamamu.
+            </p>
+
+            <br>
+
+            <p>
+                Semoga kamu selalu bahagia.
+                Dan kalau suatu hari kamu membuka website ini
+                lagi, semoga kamu tersenyum dan ingat bahwa
+                pernah ada seseorang yang membuat halaman
+                sederhana ini hanya untukmu.
+            </p>
+
+            <div class="signature">
+                Dengan ❤️,<br>
+                Seseorang yang menyayangimu.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>Made with ❤️ for Avrilia Anggraini</p>
+
+        <p>© 2026</p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        function createHeart() {
+
+            const heart = document.createElement("div");
+
+            heart.classList.add("floating-heart");
+
+            heart.innerHTML = Math.random() > 0.5 ? "❤️" : "💕";
+
+            heart.style.left = Math.random() * 100 + "vw";
+
+            heart.style.fontSize =
+                (Math.random() * 20 + 15) + "px";
+
+            heart.style.animationDuration =
+                (Math.random() * 3 + 4) + "s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 7000);
+        }
+
+        setInterval(createHeart, 800);
+
+    </script>
+
+</body>
+</html>
